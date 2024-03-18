@@ -13,6 +13,9 @@ input {
 }
 
 /* common style */
+* {
+  box-sizing: border-box;
+}
 .wrap {
   font-size: 15px;
   font-family: "Noto Sans KR", sans-serif;
@@ -23,7 +26,7 @@ input {
 
 /* header style */
 header {
-  background: orange;
+  /* background: orange; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -68,4 +71,85 @@ header .inner-header .menu-open {
 header .inner-header .menu-open .lnr-menu {
   font-size: 33px;
   margin-left: 15px;
+}
+header .gnb {
+  background: #000;
+  color: #666;
+  font-size: 40px;
+  padding: 70px 100px;
+
+  position: fixed;
+  top: 0;
+  /* js로 right를 0으로 복원하면 메뉴가 열림 */
+  right: -100%;
+  height: 100vh;
+
+  /*
+     X를 오른쪽으로 보내기 위해
+     1. flex-direction: row-reverse;
+     2. order: 1;
+  */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+header .gnb .close {
+  display: block;
+  color: #fff;
+  /* order: 1; */
+}
+header .gnb ul {
+  margin-right: 200px;
+}
+header .gnb ul li {
+  font-weight: 700;
+  line-height: 1.7;
+}
+header .gnb ul li:hover,
+header .gnb ul li.active {
+  color: #fff;
+}
+
+/* section visual style */
+section.visual .slide li {
+  /* border: 4px solid blue; */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+section.visual .slide li img {
+  width: 100%;
+  position: absolute;
+  top: -130px;
+}
+/* 형제인 img에 position이 걸려있기 때문에 txt를
+   사진 위로 올리려면 position
+*/
+section.visual .slide li .txt {
+  /* background: red; */
+  color: #fff;
+  font-size: 18px;
+
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+section.visual .slide li .txt h3 {
+  margin: 30px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+section.visual .slide li .scroll {
+  /* background: orange; */
+  position: absolute;
+  left: 50px;
+  bottom: 10%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ccc;
+  transform: rotate(-90deg);
 }
