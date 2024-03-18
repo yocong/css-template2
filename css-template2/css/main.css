@@ -1,22 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
 
 /* reset */
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 button,
 input {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 /* common style */
 .wrap {
-    font-size: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .hide {
-    display: none !important;
+  display: none !important;
+}
+
+/* header style */
+header {
+  background: orange;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 20px;
+}
+header .inner-header {
+  /* background: tomato; */
+  width: 92%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #fff;
+  font-weight: 700;
+}
+/* flex로 logo text menu 비율 설정 */
+header .inner-header .logo {
+  /* border: 3px solid blue; */
+  flex: 1;
+}
+header .inner-header .logo img {
+  height: 60px;
+}
+header .inner-header .intro-text {
+  /* border: 3px solid greenyellow; */
+  flex: 4;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+header .inner-header .menu-open {
+  /* border: 3px solid violet; */
+  flex: 1;
+  font-size: 16px;
+  /* menu와 햄버거 높이 맞춤 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .inner-header .menu-open .lnr-menu {
+  font-size: 33px;
+  margin-left: 15px;
 }
