@@ -153,3 +153,231 @@ section.visual .slide li .scroll {
   color: #ccc;
   transform: rotate(-90deg);
 }
+
+/* section.contents */
+section.contents {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 120px 0;
+}
+section.contents .main-text {
+  /* background: orange; */
+  width: 80%;
+  margin: 0 auto 100px;
+  font-size: 25px;
+  display: flex;
+  position: relative;
+  /* justify-content: space-between; */
+}
+section.contents .main-text::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ffec03;
+  position: absolute;
+  left: 70px;
+  top: 100px;
+}
+section.contents .main-text::after {
+  content: "”";
+  font-size: 300px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+}
+section.contents .main-text h3 {
+  /* border: 3px solid red; */
+  font-weight: 700;
+  flex: 1;
+}
+section.contents .main-text p {
+  /* border: 3px solid blue; */
+  font-size: 23px;
+  line-height: 1.4;
+  flex: 2;
+}
+section.contents .main-text p span {
+  display: block;
+  margin-top: 30px;
+  color: #999;
+  font-size: 20px;
+}
+
+/* > .project */
+section.contents .top {
+  /* background: orange; */
+  width: 80%;
+  margin: 200px auto 60px;
+  display: flex;
+  justify-content: space-between;
+}
+section.contents .project .top h3 {
+  /* background: blue; */
+  font-weight: 700;
+  font-size: 40px;
+}
+section.contents .project .top a {
+  /* background: red; */
+  font-size: 20px;
+}
+section.contents .project ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+section.contents .project ul:last-child {
+  margin-top: 50px;
+}
+/* 사진 액자 */
+section.contents .project ul li {
+  width: 24%;
+  height: 400px;
+  box-sizing: border-box;
+
+  border: 4px solid #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 이미지 애니메이션 */
+section.contents .project ul li a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.9);
+  position: absolute;
+  transition: 0.6s;
+}
+section.contents .project ul li a:hover::before {
+  width: 100%;
+}
+
+/* 이미지 */
+section.contents .project ul li a img {
+  width: 100%;
+}
+/* 이름 */
+section.contents .project ul li a .name {
+  font-size: 22px;
+  text-align: right;
+
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #1b1b1b;
+  right: 10px;
+  bottom: 10px;
+
+  /* hover로 1 만듦 */
+  opacity: 0;
+  position: absolute;
+}
+section.contents .project ul li a:hover .name {
+  animation: show-name 1s forwards;
+}
+@keyframes show-name {
+  from {
+    opacity: 0;
+    bottom: -30px;
+  }
+  to {
+    opacity: 1;
+    bottom: 10px;
+  }
+}
+
+/* > .partner */
+section.contents .partner {
+  /* background: orange; */
+  width: 80%;
+  margin: 170px auto 100px;
+}
+section.contents .partner h3 {
+  font-size: 17px;
+  margin-bottom: 80px;
+}
+
+section.contents .partner ul {
+  /* background: red; */
+  display: flex;
+  flex-wrap: wrap;
+}
+section.contents .partner ul li {
+  /* border: 4px solid #fff; */
+  width: 25%;
+  margin-bottom: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.contents .partner ul li img {
+  opacity: 0.3;
+  transition: 0.4s;
+}
+section.contents .partner ul li img:hover {
+  opacity: 1;
+  transition: 0.4s;
+}
+/* > .contact */
+
+section.contents .contact {
+  /* border: 3px solid orange; */
+  width: 90%;
+  background: url("../img/contact.jpg") no-repeat center/cover fixed;
+  padding: 220px 0;
+}
+section.contents .contact .inner {
+  /* border: 1px solid #fff; */
+  width: 70%;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.4;
+}
+section.contents .contact .inner h3 {
+  /* background: red; */
+  font-size: 30px;
+}
+section.contents .contact .inner p.tel {
+  /* background: blue; */
+  font-size: 60px;
+  font-weight: 700;
+  padding: 50px 0;
+}
+
+/* footer style */
+footer {
+  background: #1b1b1b;
+  color: #999;
+  padding: 0 80px 80px;
+  position: relative;
+}
+footer ul {
+  /* border: 2px solid #fff; */
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+footer ul li {
+  /* background: blue; */
+  flex: 1;
+  margin-left: 100px;
+}
+footer ul li:nth-child(2) {
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+footer ul li:nth-child(2) span {
+  /* border: 1px solid #fff; */
+  color: #666;
+  margin-right: 10px;
+}
+footer .go-top {
+  color: #fff;
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  font-size: 50px;
+}
